@@ -12,6 +12,8 @@ This example uses p5 preload function to create the classifier
 // Global variable to store the classifier
 let classifier;
 
+const options = { probabilityThreshold: 0.7 };
+
 // Teachable Machine model URL:
 let soundModel = './model/';
 
@@ -25,7 +27,7 @@ let soundModelURL = '../model/model.json';
 
 function preload() {
   // Load the model
-  classifier = ml5.soundClassifier('https://city535353.github.io/frogdetect/model/model.json');
+  classifier = ml5.soundClassifier('https://city535353.github.io/frogdetect/model/model.json',options);
 }
 
 function setup() {
@@ -54,12 +56,14 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]); results[0].label
   if(results[0].label == 'mose') {
-	label = "莫式樹蛙" + results[1].label;
+	label = "莫式樹蛙";
   }else if(results[0].label == 'taipei'){
-	label = "台北樹蛙" + results[1].label;
+	label = "台北樹蛙";
   }else if(results[0].label == 'draw'){
-	label = "諸羅樹蛙" + results[1].label;
-  }
+	label = "諸羅樹蛙" ;
+  }else{
+	label = "無結果";  
+  }  
   //label = results[0].label;
   //window.AppInventor.setWebViewString(label);
 }

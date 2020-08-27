@@ -44,6 +44,7 @@ function draw() {
   textSize(32);
   textAlign(CENTER, CENTER);
   text(label, width / 2, height / 2);
+  ThunkableWebviewerExtension.postMessage(label); 
 }
 
 
@@ -64,7 +65,7 @@ function gotResult(error, results) {
   }else{
 	label = "無結果";  
   } 
-  ThunkableWebviewerExtension.postMessage(label);  
+   
   //label = results[0].label;
   //window.AppInventor.setWebViewString(label);
 }

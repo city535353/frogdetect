@@ -54,11 +54,11 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]); results[0].label
   if(results[0].label == 'mose') {
-	label = "莫式樹蛙";
+	label = "莫式樹蛙" + results[1].label;
   }else if(results[0].label == 'taipei'){
-	label = "台北樹蛙";
+	label = "台北樹蛙" + results[1].label;
   }else if(results[0].label == 'draw'){
-	label = "諸羅樹蛙";
+	label = "諸羅樹蛙" + results[1].label;
   }
   //label = results[0].label;
   //window.AppInventor.setWebViewString(label);

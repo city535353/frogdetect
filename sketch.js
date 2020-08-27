@@ -63,7 +63,8 @@ function gotResult(error, results) {
 	label = "諸羅樹蛙" ;
   }else{
 	label = "無結果";  
-  }  
+  } 
+  ThunkableWebviewerExtension.postMessage(label);  
   //label = results[0].label;
   //window.AppInventor.setWebViewString(label);
 }

@@ -25,7 +25,7 @@ let soundModelURL = '../model/model.json';
 
 function preload() {
   // Load the model
-  classifier = ml5.soundClassifier('https://cthunter33333.github.io/frogsound/model/model.json');
+  classifier = ml5.soundClassifier('https://city535353.github.io/frogdetect/model/model.json');
 }
 
 function setup() {

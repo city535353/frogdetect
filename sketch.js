@@ -12,7 +12,7 @@ This example uses p5 preload function to create the classifier
 // Global variable to store the classifier
 let classifier;
 
-const options = { probabilityThreshold: 0.7 };
+const options = { probabilityThreshold: 0.9 };
 
 // Teachable Machine model URL:
 let soundModel = './model/';
@@ -22,15 +22,15 @@ let soundModel = './model/';
 let label = "開始收音";
 
 // Teachable Machine model URL:
-let soundModelURL = '../model/model.json';
+let soundModelURL = 'https://city535353.github.io/frogdetect/model/model.json';
 
 
 function preload() {
   // Load the model
-  classifier = ml5.soundClassifier('https://city535353.github.io/frogdetect/model/model.json',options);
+  classifier = ml5.soundClassifier(soundModelURL,options,modelready);
 }
 
-function setup() {
+function modelready() {
   createCanvas(320, 240);
   // Start classifying
   // The sound model will continuously listen to the microphone

@@ -43,7 +43,7 @@ function draw() {
   fill(255);
   textSize(32);
   textAlign(CENTER, CENTER);
-  ThunkableWebviewerExtension.postMessage(label);
+  //ThunkableWebviewerExtension.postMessage(label);
   text(label, width / 2, height / 2);
   
   

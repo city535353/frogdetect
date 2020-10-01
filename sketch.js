@@ -64,6 +64,8 @@ function gotResult(error, results) {
 	label = "台北樹蛙";
   }else if(results[0].label == 'draw'){
 	label = "諸羅樹蛙" ;
+  }else{
+	label = "未發現";  
   }
    
   //label = results[0].label;

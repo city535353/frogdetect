@@ -12,7 +12,7 @@ This example uses p5 preload function to create the classifier
 // Global variable to store the classifier
 let classifier;
 
-const options = { probabilityThreshold: 0.9 };
+const options = { probabilityThreshold: 0.8 };
 
 // Teachable Machine model URL:
 let soundModel = './model/';

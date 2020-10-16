@@ -72,7 +72,9 @@ function gotResult(error, results) {
   
 }
 
-
+ThunkableWebviewerExtension.receiveMessage(function(message) {
+      label = message;
+});
 
 
 

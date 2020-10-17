@@ -28,6 +28,7 @@ let soundModelURL = 'https://city535353.github.io/frogdetect/model/model.json';
 function preload() {
 	createCanvas(320, 240);
 	draw();
+	setTimeout(function(){ location.href = "https://city535353.github.io/frogdetect/index.html"},300000);
   // Load the model
   //classifier = ml5.soundClassifier(soundModelURL,options,modelready);
 }

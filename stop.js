@@ -19,7 +19,7 @@ const options = { probabilityThreshold: 0.8 };
 
 
 // Label (start by showing listening)
-let label = "開始收音";
+let label = "停止收音";
 
 // Teachable Machine model URL:
 let soundModelURL = 'https://city535353.github.io/frogdetect/model/model.json';

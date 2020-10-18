@@ -27,7 +27,7 @@ let soundModelURL = 'https://city535353.github.io/frogdetect/model/model.json';
 
 function preload() {
   // Load the model
-  setTimeout(function(){ location.href = "https://city535353.github.io/frogdetect/test.html"},60000);
+  
   classifier = ml5.soundClassifier(soundModelURL,options,modelready);
 }
 
@@ -36,6 +36,7 @@ function modelready() {
   // Start classifying
   // The sound model will continuously listen to the microphone
   classifier.classify(gotResult);
+  setTimeout(function(){ location.href = "https://city535353.github.io/frogdetect/test.html"},30000);
 }
 
 function draw() {
